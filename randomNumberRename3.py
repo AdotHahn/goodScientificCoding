@@ -51,4 +51,6 @@ if __name__ == "__main__":
 		roll= get_random_number(1,6)
 		rolls.append(roll)
 		print(rolls)
-		sys.stdout.flush)=
+		sys.stdout.flush
+		plt.bar(range(6), rolls)
+		plt.show()
