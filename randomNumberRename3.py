@@ -14,7 +14,7 @@ def get_random_number(start, end):
 
 def write_log_file(outputfilename, data):
     f = open(outputfilename + ".log", "a")
-    f.write("Your randomly generated number is " + str(data) + " (" + time.strftime("%H:%M:%S") + ")\n")
+    f.write("Our randomly generated number is " + str(data) + " (" + time.strftime("%H:%M:%S") + ")\n")
     f.close()
 
 
