@@ -21,9 +21,11 @@ def write_log_file(outputfilename, data):
 if __name__ == "__main__":
     outputfilename = "randomNumber2"
     roll = get_random_number(1, 6)
+	print("debug print")
     write_log_file(outputfilename, roll)
+	get_color_by_dice(roll)
 
-def get_color_by_dice_naive(spots):
+def get_color_by_dice(spots):
     if spots == 1:
         color = 'blue'
     elif spots == 2:
