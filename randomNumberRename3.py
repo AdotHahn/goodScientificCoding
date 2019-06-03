@@ -2,12 +2,13 @@
 # -*- coding: utf-8 -*-
 #
 # team: Armin, Baltasar, Claudia
+# expert of exercise block 1: teammember 1
 
 import random
 import time
 import sys
 
-def get_random_number(start, end):
+def get_random_number_with_randint(start, end):
     num = random.randint(start, end)
     return num
 
@@ -18,14 +19,12 @@ def write_log_file(outputfilename, data):
     f.close()
 
 
-if __name__ == "__main__":
-    outputfilename = "randomNumber2"
-    roll = get_random_number(1, 6)
-	print("debug print")
-    write_log_file(outputfilename, roll)
-	get_color_by_dice(roll)
+def get_color_by_dice_roll(spots):
+    colors = ["blue", "green", 'red', 'yellow', 'purple', 'orange']
+    return colors[spots-1]
 
-def get_color_by_dice(spots):
+
+def get_color_by_dice_naive(spots):
     if spots == 1:
         color = 'blue'
     elif spots == 2:
@@ -39,3 +38,10 @@ def get_color_by_dice(spots):
     else: # spots == 6:
         color = 'orange'
     return color
+
+
+if __name__ == "__main__":
+    outputfilename = "randomNumber"
+    roll = get_random_number(1, 6)
+    color = get_color_by_dice_roll(roll)
+    write_log_file(outputfilename, color)
